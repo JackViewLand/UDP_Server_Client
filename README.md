@@ -5,9 +5,12 @@
 * 伺服器程式碼位於 server.c。
 * 在編譯並運行該程式之前，請先確保您的系統已經安裝了 GCC 編譯器。
 * 在終端機中執行以下命令以編譯並運行伺服器：
-
-```
+編譯
+```code
 gcc server.c -o server
+```
+執行
+```code
 ./server <IP> <port>
 ```
 其中 <IP> 是指要監聽的 IP 位址，<port> 是指要監聽的埠號。
@@ -17,8 +20,16 @@ gcc server.c -o server
 * 用戶端程式碼位於 client.c。
 * 在編譯並運行該程式之前，請先確保您的系統已經安裝了 GCC 編譯器。
 * 在終端機中執行以下命令以編譯並運行用戶端程式：
-```
+編譯
+```code
 gcc client.c -o client
+```
+* UDP_Client.c:(.text+0x374): undefined reference to `fmin'
+```
+gcc UDP_Client.c -o UDP_Client -lm
+```
+執行
+```code
 ./client <IP> <port> <message>
 ```
 其中 <IP> 是指要連接的伺服器 IP 位址，<port> 是指要連接的伺服器埠號，<message> 是要傳送的訊息。
